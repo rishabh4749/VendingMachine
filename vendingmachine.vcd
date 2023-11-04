@@ -1,0 +1,92 @@
+$date
+	Thu Sep 21 11:10:12 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 4 ! change [3:0] $end
+$var wire 2 " delivery [1:0] $end
+$var wire 3 # states [2:0] $end
+$var reg 2 $ choice [1:0] $end
+$var reg 2 % clk [1:0] $end
+$var reg 4 & money [3:0] $end
+$var reg 2 ' reset [1:0] $end
+$scope module v0 $end
+$var wire 2 ( choice [1:0] $end
+$var wire 1 ) clk $end
+$var wire 4 * money [3:0] $end
+$var wire 2 + reset [1:0] $end
+$var reg 4 , change [3:0] $end
+$var reg 2 - delivery [1:0] $end
+$var reg 3 . states [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx .
+bx -
+bx ,
+bx +
+bx *
+0)
+bx (
+bx '
+bx &
+b0 %
+bx $
+bx #
+bx "
+bx !
+$end
+#5
+b0 '
+b0 +
+b10 $
+b10 (
+1)
+b11 %
+#10
+0)
+b0 %
+#15
+b0 ,
+b0 !
+b0 -
+b0 "
+b100 .
+b100 #
+b1010 &
+b1010 *
+1)
+b11 %
+#20
+0)
+b0 %
+#25
+b101 ,
+b101 !
+b1 -
+b1 "
+b101 .
+b101 #
+b1 '
+b1 +
+1)
+b11 %
+#30
+0)
+b0 %
+#35
+b0 ,
+b0 !
+b0 -
+b0 "
+b0 .
+b0 #
+1)
+b11 %
