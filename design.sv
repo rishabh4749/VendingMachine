@@ -1,7 +1,7 @@
 
 module vendingmachine(clk,money,reset,states,choice,delivery,change);
   input [3:0]money;
-  input [1:0]reset;
+  input [1:0]reset; 
   input [1:0]choice;
   parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
   output reg [1:0]delivery;
