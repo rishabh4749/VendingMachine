@@ -1,14 +1,20 @@
 
 module vendingmachine(clk,money,reset,states,choice,delivery,change);
   input [3:0]money;
-  input [1:0]reset; 
+  input reset; 
   input [1:0]choice;
   parameter s0=3'b000,s1=3'b001,s2=3'b010,s3=3'b011,s4=3'b100,s5=3'b101;
-  output reg [1:0]delivery;
+  output reg delivery;
   output reg [3:0]change;
   output reg [2:0]states;
   input clk;
   always @ (posedge clk)
+     if (reset) begin
+    states   <= s0;
+    delivery <= 1'b0;
+    change   <= 4'b0000;
+     end
+  else
     begin
       case(states)
         s0:begin
@@ -24,10 +30,12 @@ module vendingmachine(clk,money,reset,states,choice,delivery,change);
               delivery<=1'b0;
               change<=4'b0000;
             end
-          else
-            begin
-              $display(" INVALID CHOICE ");
-            end
+          else begin
+  states   <= s0; 
+  delivery <= 1'b0;
+  change   <= 4'b0000;
+  $display(" INVALID CHOICE ");
+end
         end
         s1:begin
           if(money==4'b0000)
