@@ -1,10 +1,9 @@
 module tb;
-  // Corrected signal widths to match module interface
-  reg clk;                  // 1-bit clock (was [1:0])
+  reg clk;                  // 1-bit clock 
   reg [3:0] money;
-  reg reset;                // 1-bit reset (was [1:0])
+  reg reset;                // 1-bit reset 
   reg [1:0] choice;
-  wire delivery;            // 1-bit delivery (was [1:0])
+  wire delivery;            // 1-bit delivery
   wire [3:0] change;
   wire [2:0] states;
   
